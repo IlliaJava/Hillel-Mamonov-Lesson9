@@ -8,6 +8,20 @@ package com.hillel.lesson9.task1;
 import java.util.Scanner;
 
 public class CompoundInterest {
+    public static void main(String[] args) {
+        double interest = 0.015;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите сумму вклада:");
+        int s = scanner.nextInt();
+        System.out.println("Введите количество лет:");
+        int n = scanner.nextInt();
 
+        System.out.println("\nПоложив $" + s + " денег в банк, через " + n + " лет ваш вклад вырастет до $"
+                + calculateDeposit(s, n, interest) + ", при текущей ставке " + interest * 100 + "%.");
+    }
+
+    private static double calculateDeposit(int sum, int years, double interest) {
+        return sum * (Math.pow((1 + interest / 12), 12 * years));
+    }
 
 }
