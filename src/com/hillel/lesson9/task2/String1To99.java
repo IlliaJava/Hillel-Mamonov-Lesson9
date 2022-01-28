@@ -20,9 +20,9 @@ public class String1To99 {
         for (int i = 1; i < 100; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
                 result.append("HelloWorld ");
-            } else if (i % 3 == 0 && i % 5 != 0) {
+            } else if (i % 3 == 0) {
                 result.append("Hello ");
-            } else if (i % 5 == 0 && i % 3 != 0) {
+            } else if (i % 5 == 0) {
                 result.append("World ");
             } else {
                 result.append(i).append(" ");

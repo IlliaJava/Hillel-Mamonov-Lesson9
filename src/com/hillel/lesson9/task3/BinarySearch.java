@@ -33,7 +33,8 @@ public class BinarySearch {
 
         if (left <= right) {
             return index;
-        } else
+        } else {
             return -1;
+        }
     }
 }
